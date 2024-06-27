@@ -118,7 +118,7 @@ where
     };
 
     let collab_embedding = if let Some(indexer) = &self.indexer {
-      Some(indexer.index(collab.clone()).await?)
+      indexer.index(collab.clone()).await?
     } else {
       None
     };
